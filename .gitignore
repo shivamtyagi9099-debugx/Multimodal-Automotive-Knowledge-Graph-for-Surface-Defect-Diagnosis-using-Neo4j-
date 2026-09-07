@@ -1,0 +1,53 @@
+# Python caches and build output
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Dataset contents (directory placeholders remain tracked)
+data/raw/**/*
+data/processed/**/*
+data/cache/**/*
+!data/raw/**/.gitkeep
+!data/processed/**/.gitkeep
+
+# Uploaded images
+storage/uploads/**/*
+!storage/uploads/.gitkeep
+
+# Trained model artifacts
+*.pt
+*.pth
+*.onnx
+*.ckpt
+artifacts/models/**/*
+!artifacts/models/.gitkeep
+
+# Generated evaluation artifacts
+artifacts/metrics/**/*
+artifacts/figures/**/*
+!artifacts/metrics/.gitkeep
+!artifacts/figures/.gitkeep
+
+# IDE and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Keep directory placeholders trackable
+!**/.gitkeep

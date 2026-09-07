@@ -1,0 +1,10 @@
+Runtime-only storage for user-uploaded car-body panel images.
+
+The backend creates this directory when necessary and stores verified JPEG or
+PNG content under generated UUID filenames. Uploaded images are ignored by Git
+and must not be treated as training data unless they are separately reviewed,
+labelled, consented for that use, and added through the dataset preparation
+workflow.
+
+For the university PoC, clear this runtime directory according to the approved
+local data-retention policy. Never commit user uploads or personal information.

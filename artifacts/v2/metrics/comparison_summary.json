@@ -1,0 +1,40 @@
+{
+  "promoted_version": "v2",
+  "promoted_model_sha256": "e2b329f3d96d1300a6b87bb7b0799d2fee76e12174095de52c19de2243c6ae07",
+  "dataset": {
+    "candidate_count": 497,
+    "accepted_count": 350,
+    "rejected_count": 147,
+    "accepted_by_class": {
+      "normal": 80,
+      "scratch": 100,
+      "dent": 100,
+      "rust": 70
+    },
+    "split_counts": {
+      "train": 280,
+      "validation": 35,
+      "test": 35
+    }
+  },
+  "frozen_test": {
+    "sample_count": 35,
+    "correct_count": 25,
+    "accuracy": 0.7142857142857143,
+    "macro_f1": 0.6948529411764706,
+    "weighted_f1": 0.704201680672269,
+    "confidence_threshold": 0.65,
+    "threshold_accepted_count": 29,
+    "threshold_accepted_accuracy": 0.7586206896551724
+  },
+  "direct_before_after_comparison": {
+    "evidence": "same preselected 40-image external demo",
+    "selection_timing": "frozen before inference",
+    "baseline_correct": 15,
+    "baseline_accuracy": 0.375,
+    "v2_correct": 28,
+    "v2_accuracy": 0.7,
+    "absolute_accuracy_gain": 0.325
+  },
+  "comparison_warning": "Baseline and v2 frozen-test scores use different test sets and are not a valid direct comparison."
+}

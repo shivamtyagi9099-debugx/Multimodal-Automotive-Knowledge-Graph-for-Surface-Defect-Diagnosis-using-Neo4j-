@@ -1,0 +1,8 @@
+Generated output directory for the trained PyTorch checkpoint.
+
+Expected file:
+- model.pt: written by ml.src.training.train using ml/configs/training.yaml.
+
+Do not place a fabricated or untrained checkpoint here. The backend remains in
+degraded mode until a real checkpoint is produced from the prepared training
+and validation data.

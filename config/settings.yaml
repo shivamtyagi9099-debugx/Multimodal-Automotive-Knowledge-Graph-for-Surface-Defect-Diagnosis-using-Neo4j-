@@ -1,0 +1,23 @@
+# Core application and model-inference settings.
+project_name: car-body-panel-defect-classification-poc
+object_type: car_body_panel
+
+# The order in this file must remain identical to the model output-index order.
+class_names_path: config/class_names.json
+confidence_threshold: 0.65
+unknown_message: "Defect unknown - Please review manually."
+model_path: artifacts/v2/models/model.pt
+
+# The JSON catalog remains the reproducible seed/fallback source for this PoC.
+catalog_path: data/static/defect_catalog.json
+feedback_csv_path: data/feedback/prediction_feedback.csv
+upload_directory: storage/uploads
+
+# Upload validation is intentionally limited to common image formats.
+maximum_upload_size_mb: 10
+allowed_image_types:
+  - image/jpeg
+  - image/png
+
+# Static date displayed by the UI because inventory values are simulated.
+inventory_last_updated: "2026-08-19"

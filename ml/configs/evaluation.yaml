@@ -1,0 +1,15 @@
+frozen_test_path: data/processed/test
+test_manifest_path: data/manifests/test_manifest.csv
+test_manifest_checksum_path: data/manifests/test_set_checksum.txt
+model_path: artifacts/models/model.pt
+class_names_path: config/class_names.json
+image_size: 224
+batch_size: 32
+num_workers: 0
+confidence_threshold: 0.60
+metrics_output_path: artifacts/metrics/per_class_metrics.csv
+confusion_matrix_output_path: artifacts/figures/confusion_matrix.png
+report_output_path: artifacts/metrics/evaluation_report.json
+predictions_output_path: artifacts/metrics/test_predictions.csv
+confidence_analysis_output_path: artifacts/metrics/confidence_analysis.json
+misclassification_output_path: artifacts/metrics/misclassification_report.csv

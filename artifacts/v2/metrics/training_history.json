@@ -1,0 +1,237 @@
+{
+  "training_metrics": [
+    {
+      "loss": 1.305691623687744,
+      "accuracy": 0.39285714285714285,
+      "stage": "classification_head",
+      "learning_rate": 0.001
+    },
+    {
+      "loss": 1.0221171821866717,
+      "accuracy": 0.5964285714285714,
+      "stage": "classification_head",
+      "learning_rate": 0.001
+    },
+    {
+      "loss": 0.8352156179291862,
+      "accuracy": 0.7107142857142857,
+      "stage": "classification_head",
+      "learning_rate": 0.001
+    },
+    {
+      "loss": 0.7037224394934518,
+      "accuracy": 0.7714285714285715,
+      "stage": "classification_head",
+      "learning_rate": 0.001
+    },
+    {
+      "loss": 0.6797158743653978,
+      "accuracy": 0.7785714285714286,
+      "stage": "classification_head",
+      "learning_rate": 0.001
+    },
+    {
+      "loss": 0.5771851113864354,
+      "accuracy": 0.8107142857142857,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.33924149956021993,
+      "accuracy": 0.8892857142857142,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.18222618124314716,
+      "accuracy": 0.9607142857142857,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.1636820688843727,
+      "accuracy": 0.9714285714285714,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.09509168692997523,
+      "accuracy": 0.9892857142857143,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.08081782843385424,
+      "accuracy": 0.9892857142857143,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.06411773232477051,
+      "accuracy": 0.9857142857142858,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.05791777840682438,
+      "accuracy": 0.9857142857142858,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.04732761856700693,
+      "accuracy": 0.9928571428571429,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.054790487033980234,
+      "accuracy": 0.9785714285714285,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.06489310456173761,
+      "accuracy": 0.9892857142857143,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.035293521998184064,
+      "accuracy": 0.9964285714285714,
+      "stage": "full_fine_tuning",
+      "learning_rate": 1.5e-05
+    },
+    {
+      "loss": 0.038987397349306514,
+      "accuracy": 0.9964285714285714,
+      "stage": "full_fine_tuning",
+      "learning_rate": 1.5e-05
+    },
+    {
+      "loss": 0.020082838061664787,
+      "accuracy": 1.0,
+      "stage": "full_fine_tuning",
+      "learning_rate": 1.5e-05
+    }
+  ],
+  "validation_metrics": [
+    {
+      "loss": 1.0795002971376693,
+      "accuracy": 0.45714285714285713,
+      "stage": "classification_head",
+      "learning_rate": 0.001
+    },
+    {
+      "loss": 0.9123708954879216,
+      "accuracy": 0.6571428571428571,
+      "stage": "classification_head",
+      "learning_rate": 0.001
+    },
+    {
+      "loss": 0.7520941121237619,
+      "accuracy": 0.7428571428571429,
+      "stage": "classification_head",
+      "learning_rate": 0.001
+    },
+    {
+      "loss": 0.6770492758069719,
+      "accuracy": 0.8,
+      "stage": "classification_head",
+      "learning_rate": 0.001
+    },
+    {
+      "loss": 0.6071828314236232,
+      "accuracy": 0.8285714285714286,
+      "stage": "classification_head",
+      "learning_rate": 0.001
+    },
+    {
+      "loss": 0.3443277563367571,
+      "accuracy": 0.9142857142857143,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.33920210472175055,
+      "accuracy": 0.8571428571428571,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.24722891194479807,
+      "accuracy": 0.9142857142857143,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.24502005193914686,
+      "accuracy": 0.8571428571428571,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.19153138462986266,
+      "accuracy": 0.9428571428571428,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.17793125680514743,
+      "accuracy": 0.9428571428571428,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.1756189397403172,
+      "accuracy": 0.9428571428571428,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.16442253845078605,
+      "accuracy": 0.9428571428571428,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.19558056720665523,
+      "accuracy": 0.9142857142857143,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.26719645815236226,
+      "accuracy": 0.8857142857142857,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.2565497892243522,
+      "accuracy": 0.8857142857142857,
+      "stage": "full_fine_tuning",
+      "learning_rate": 5e-05
+    },
+    {
+      "loss": 0.22436599912387983,
+      "accuracy": 0.8857142857142857,
+      "stage": "full_fine_tuning",
+      "learning_rate": 1.5e-05
+    },
+    {
+      "loss": 0.18495717527610914,
+      "accuracy": 0.9142857142857143,
+      "stage": "full_fine_tuning",
+      "learning_rate": 1.5e-05
+    },
+    {
+      "loss": 0.17761219622833388,
+      "accuracy": 0.9428571428571428,
+      "stage": "full_fine_tuning",
+      "learning_rate": 1.5e-05
+    }
+  ],
+  "best_epoch": 13,
+  "best_validation_loss": 0.16442253845078605,
+  "epochs_completed": 19
+}

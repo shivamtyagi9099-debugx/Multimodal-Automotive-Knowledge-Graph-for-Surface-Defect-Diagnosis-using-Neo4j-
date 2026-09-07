@@ -1,0 +1,103 @@
+{
+  "object_type": "car_body_panel",
+  "inventory_last_updated": "2026-08-19",
+  "confidence_threshold": 0.6,
+  "unknown_message": "Defect unknown - Please review manually.",
+  "defects": [
+    {
+      "class_name": "normal",
+      "display_name": "Normal / No Defect",
+      "repair_steps": [],
+      "parts": []
+    },
+    {
+      "class_name": "scratch",
+      "display_name": "Scratch",
+      "repair_steps": [
+        "Have a qualified repairer clean the panel, inspect the scratch depth, and confirm whether it is limited to the clear coat or has exposed the colour coat, primer, or bare metal.",
+        "For a minor finish defect, use the appropriate graded abrasive to refine the damaged area, then compound and polish it; deeper paint damage requires the vehicle maker's approved primer, colour, and clear-coat refinishing process.",
+        "Clean and inspect the finished area under suitable lighting; if the scratch remains visible, exposes metal, or crosses a panel edge, refer it for professional refinishing."
+      ],
+      "parts": [
+        {
+          "part_id": "SIM-SCR-001",
+          "part_name": "Mock fine abrasive and polishing kit",
+          "mock_price": 899.0,
+          "currency": "INR",
+          "fake_stock_quantity": 14,
+          "availability_status": "in_stock"
+        },
+        {
+          "part_id": "SIM-SCR-002",
+          "part_name": "Mock colour-matched touch-up paint kit",
+          "mock_price": 749.0,
+          "currency": "INR",
+          "fake_stock_quantity": 4,
+          "availability_status": "low_stock"
+        }
+      ]
+    },
+    {
+      "class_name": "dent",
+      "display_name": "Dent",
+      "repair_steps": [
+        "Have a qualified repairer pre-clean the panel and inspect the dent, paint condition, panel material, nearby reinforcements, and access behind the damaged area before choosing a repair method.",
+        "Use an OEM-approved paintless dent-repair method only when the paint and metal are suitable; otherwise remove the damaged finish, restore the panel contour, and apply body filler or glaze according to the repair-product and vehicle-maker procedures.",
+        "Sand and prepare the repaired area for primer and paint, then verify the panel contour, gaps, finish, and refitted trim during the final inspection."
+      ],
+      "parts": [
+        {
+          "part_id": "SIM-DEN-001",
+          "part_name": "Mock paintless dent-repair tool set",
+          "mock_price": 2499.0,
+          "currency": "INR",
+          "fake_stock_quantity": 7,
+          "availability_status": "in_stock"
+        },
+        {
+          "part_id": "SIM-DEN-002",
+          "part_name": "Mock body filler and applicator kit",
+          "mock_price": 1099.0,
+          "currency": "INR",
+          "fake_stock_quantity": 3,
+          "availability_status": "low_stock"
+        }
+      ]
+    },
+    {
+      "class_name": "rust",
+      "display_name": "Rust",
+      "repair_steps": [
+        "Have a qualified repairer clean the area, remove trim as required, and inspect both sides of the panel to determine whether corrosion is superficial or has perforated or structurally weakened the metal.",
+        "Remove the affected coating and corrosion to sound metal using the approved abrasive and repair process; perforated or weakened metal must be repaired or replaced using the vehicle maker's body-repair instructions.",
+        "Restore the specified primer, paint, seam sealer, cavity protection, and undercoating as applicable, then inspect the completed repair for full coverage and corrosion protection."
+      ],
+      "parts": [
+        {
+          "part_id": "SIM-RUS-001",
+          "part_name": "Mock corrosion-removal abrasive kit",
+          "mock_price": 649.0,
+          "currency": "INR",
+          "fake_stock_quantity": 11,
+          "availability_status": "in_stock"
+        },
+        {
+          "part_id": "SIM-RUS-002",
+          "part_name": "Mock automotive corrosion-protection coating kit",
+          "mock_price": 1399.0,
+          "currency": "INR",
+          "fake_stock_quantity": 0,
+          "availability_status": "out_of_stock"
+        },
+        {
+          "part_id": "SIM-RUS-003",
+          "part_name": "Mock replacement outer panel",
+          "mock_price": 8999.0,
+          "currency": "INR",
+          "fake_stock_quantity": 2,
+          "availability_status": "low_stock"
+        }
+      ]
+    }
+  ]
+}

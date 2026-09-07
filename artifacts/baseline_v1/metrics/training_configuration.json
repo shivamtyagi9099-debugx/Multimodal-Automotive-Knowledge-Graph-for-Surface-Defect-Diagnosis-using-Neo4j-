@@ -1,0 +1,36 @@
+{
+  "random_seed": 42,
+  "training_path": "data/processed/train",
+  "validation_path": "data/processed/validation",
+  "class_names_path": "config/class_names.json",
+  "source_manifest_path": "data/manifests/dataset_manifest.csv",
+  "training_manifest_path": "data/manifests/train_manifest.csv",
+  "validation_manifest_path": "data/manifests/validation_manifest.csv",
+  "image_size": 224,
+  "batch_size": 16,
+  "epoch_count": 20,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "early_stopping_patience": 6,
+  "model_architecture": "resnet18",
+  "pretrained": true,
+  "freeze_feature_extractor": false,
+  "confidence_threshold": 0.6,
+  "num_workers": 0,
+  "model_output_path": "artifacts/models/model.pt",
+  "history_output_path": "artifacts/metrics/training_history.json",
+  "validation_threshold_output_path": "artifacts/metrics/validation_threshold_analysis.json",
+  "training_configuration_output_path": "artifacts/metrics/training_configuration.json",
+  "class_names": [
+    "normal",
+    "scratch",
+    "dent",
+    "rust"
+  ],
+  "dataset_provenance": {
+    "source_manifest_sha256": "0ef00cb4bd579c4b1aba425cfa75e4f0378f7bca7960ec8c24d4be9ec087ab2d",
+    "training_manifest_sha256": "d83507e2e51f51c393877af11b2cfc3421b07599ab47f2251c6357c9df0d5ab2",
+    "validation_manifest_sha256": "8688fdcf6f6e750fea4251f389c4a8c347f1d6a3c31cea67be25fac19e4c1834",
+    "class_names_sha256": "ae904b2b51df7d71383a33a399cc743e2dc28b24edd051916ad43d9216d5e2cd"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": "baseline_v1",
+  "model_sha256": "070b774d1479b9bb38562705c423277a36c9c3327ee376a9082f13f9751a3418",
+  "development_image_count": 120,
+  "frozen_test": {
+    "sample_count": 12,
+    "accuracy": 0.75,
+    "macro_f1": 0.7291666666666666,
+    "weighted_f1": 0.7291666666666666,
+    "note": "Preserved original split; do not directly compare this score with the v2 test score."
+  },
+  "fixed_external_demo": {
+    "sample_count": 40,
+    "correct_count": 15,
+    "accuracy": 0.375,
+    "per_class_correct": {
+      "normal": 10,
+      "scratch": 3,
+      "dent": 2,
+      "rust": 0
+    }
+  }
+}

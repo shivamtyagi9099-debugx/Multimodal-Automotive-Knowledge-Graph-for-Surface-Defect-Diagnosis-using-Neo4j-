@@ -1,0 +1,11 @@
+sample_index,filename,true_class,predicted_class,confidence,requires_manual_review,is_correct
+1,dent-44eb1c9449b148ca__hitl-830c6f1eedb9086f.jpg,dent,scratch,0.849393904209137,False,False
+2,dent-504b6ab0eaf07221__hitl-6c7163f2be3b282a.jpg,dent,scratch,0.5045962929725647,True,False
+4,dent-8a7fe249987d5ca1__hitl-5a5601ea78f1edf2.jpg,dent,scratch,0.7378537654876709,False,False
+8,dent-e2f0a548788c01ae__hitl-159032262d459bf8.jpg,dent,scratch,0.8612736463546753,False,False
+14,normal-96091bed9bf4f9ed__commons-149632179.jpg,normal,rust,0.5411993861198425,True,False
+19,rust-686422df953018d0__commons-66345356.jpg,rust,normal,0.8320757746696472,False,False
+20,rust-6bd1a2c6ab3d9406__hitl-16d53467d2bd9382.jpg,rust,dent,0.7448812127113342,False,False
+23,rust-d5b47c085e36b1a3__commons-66269957.jpg,rust,normal,0.8336585164070129,False,False
+24,rust-e3c3f8920307905e__hitl-0ec8486f8c07c432.jpg,rust,scratch,0.3762941062450409,True,False
+25,scratch-108d8931f8a15731__hitl-05a112b0da8d53e8.jpg,scratch,rust,0.7606176733970642,False,False

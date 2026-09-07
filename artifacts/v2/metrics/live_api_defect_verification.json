@@ -1,0 +1,57 @@
+{
+  "api_url": "http://127.0.0.1:8899",
+  "root_status": 200,
+  "health_status": 200,
+  "health": {
+    "status": "healthy",
+    "model_loaded": true,
+    "catalog_loaded": true,
+    "neo4j_configured": true,
+    "neo4j_connected": true,
+    "knowledge_source": "neo4j",
+    "neo4j_message": "Neo4j connection verified."
+  },
+  "openapi_status": 200,
+  "prediction_status": 200,
+  "prediction": {
+    "prediction_id": "43dd6ad55fcc401ebdc0fe76597bc45e",
+    "filename": "hitl-55e7dfbbd6c32a45.jpg",
+    "image_sha256": "f93eedeff66f60ed7d2a9937790798599da5bea6e4c11a7191260c77d626b06b",
+    "predicted_class": "scratch",
+    "most_likely_class": "scratch",
+    "display_name": "Scratch",
+    "confidence": 0.9265511631965637,
+    "requires_manual_review": false,
+    "feedback_applied": false,
+    "message": "Predicted class: scratch",
+    "repair_steps": [
+      "Have a qualified repairer clean the panel, inspect the scratch depth, and confirm whether it is limited to the clear coat or has exposed the colour coat, primer, or bare metal.",
+      "For a minor finish defect, use the appropriate graded abrasive to refine the damaged area, then compound and polish it; deeper paint damage requires the vehicle maker's approved primer, colour, and clear-coat refinishing process.",
+      "Clean and inspect the finished area under suitable lighting; if the scratch remains visible, exposes metal, or crosses a panel edge, refer it for professional refinishing."
+    ],
+    "parts": [
+      {
+        "part_id": "SIM-SCR-001",
+        "part_name": "Mock fine abrasive and polishing kit",
+        "mock_price": 899.0,
+        "currency": "INR",
+        "fake_stock_quantity": 14,
+        "availability_status": "in_stock"
+      },
+      {
+        "part_id": "SIM-SCR-002",
+        "part_name": "Mock colour-matched touch-up paint kit",
+        "mock_price": 749.0,
+        "currency": "INR",
+        "fake_stock_quantity": 4,
+        "availability_status": "low_stock"
+      }
+    ],
+    "inventory_last_updated": "2026-08-19",
+    "inventory_is_simulated": true,
+    "knowledge_source": "neo4j",
+    "poc_disclaimer": "Academic proof-of-concept only. This is not a universal vehicle diagnostic tool."
+  },
+  "feedback_status": null,
+  "feedback": null
+}

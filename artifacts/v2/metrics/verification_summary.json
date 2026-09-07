@@ -1,0 +1,53 @@
+{
+  "verified_on": "2026-09-07",
+  "environment": {
+    "python": "3.14.6",
+    "pytorch": "2.13.0",
+    "neo4j_driver": "6.2.0",
+    "neo4j_container": "neo4j:2026.06.0"
+  },
+  "automated_tests": {
+    "passed": 54,
+    "failed": 0,
+    "warning_count": 1,
+    "warning_note": "Starlette TestClient deprecation warning from the installed FastAPI dependency; no project test failed."
+  },
+  "python_compilation": "passed",
+  "dependency_check": "passed; no broken requirements",
+  "dataset_integrity": {
+    "status": "passed",
+    "traceability_required": true,
+    "sha256_verified": true,
+    "perceptual_hash_verified": true,
+    "test_manifest_checksum_verified": true,
+    "maximum_near_duplicate_hamming_distance": 6,
+    "cross_split_near_duplicate_count": 0,
+    "demo_development_overlap_count": 0
+  },
+  "live_application": {
+    "frontend_root_status": 200,
+    "health_status": 200,
+    "openapi_status": 200,
+    "prediction_status": 200,
+    "feedback_route_previously_verified_status": 200,
+    "browser_console_error_or_warning_count": 0,
+    "neo4j_seed_counts": {
+      "object_types": 1,
+      "defects": 4,
+      "repair_steps": 9,
+      "parts": 7,
+      "inventory_records": 7
+    },
+    "neo4j_healthy_path": "passed",
+    "static_fallback_path": "passed",
+    "measured_offline_fallback_verification_seconds": 3.19,
+    "neo4j_recovery_path": "passed",
+    "occupied_port_preflight": "passed with clear exit status 2 error"
+  },
+  "external_demo": {
+    "status": "completed without filtering failures",
+    "correct_count": 28,
+    "sample_count": 40,
+    "accuracy": 0.7
+  }
+}

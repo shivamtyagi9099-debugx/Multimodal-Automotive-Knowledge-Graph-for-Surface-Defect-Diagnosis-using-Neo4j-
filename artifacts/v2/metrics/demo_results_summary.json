@@ -1,0 +1,11 @@
+{
+  "api_url": "http://127.0.0.1:8899",
+  "sample_count": 40,
+  "overall_accuracy": 0.7,
+  "per_class_accuracy": {
+    "normal": 0.9,
+    "scratch": 0.4,
+    "dent": 0.5,
+    "rust": 1.0
+  }
+}

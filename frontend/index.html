@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Academic proof-of-concept for classifying car-body panel images as normal, scratch, dent, or rust."
+    >
+    <title>PanelCheck — Defect Classification PoC</title>
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/static/css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="PanelCheck home">
+          <span class="brand-mark" aria-hidden="true">PC</span>
+          <span>
+            <strong>PanelCheck</strong>
+            <small>Defect Classification PoC</small>
+          </span>
+        </a>
+        <div class="header-statuses">
+          <span class="academic-badge">Academic project</span>
+          <span id="api-status" class="api-status" role="status">
+            <span class="status-dot" aria-hidden="true"></span>
+            Checking API…
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Image classification · PyTorch</p>
+          <h1 id="page-title">Inspect a car-body panel image</h1>
+          <p class="hero-copy">
+            Upload one clear image to classify it as Normal, Scratch, Dent, or
+            Rust. Results include model confidence, verified repair guidance,
+            and simulated parts inventory.
+          </p>
+        </div>
+        <aside class="scope-card" aria-label="Project scope">
+          <span class="scope-icon" aria-hidden="true">i</span>
+          <div>
+            <strong>Scoped proof-of-concept</strong>
+            <p>
+              This system supports one object type and four classes. It is not
+              a universal vehicle diagnostic tool. Guidance comes from Neo4j
+              when available, with a clearly labelled static fallback.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <div class="workspace-grid">
+        <section class="card upload-card" aria-labelledby="upload-heading">
+          <div class="card-heading">
+            <div>
+              <p class="step-label">Step 1</p>
+              <h2 id="upload-heading">Choose an image</h2>
+            </div>
+            <span class="file-limit">PNG or JPEG · Max 10 MB</span>
+          </div>
+
+          <form id="prediction-form" novalidate>
+            <label id="drop-zone" class="drop-zone" for="image-input">
+              <input
+                id="image-input"
+                name="image"
+                type="file"
+                accept="image/jpeg,image/png,.jpg,.jpeg,.png"
+                required
+              >
+              <span class="upload-icon" aria-hidden="true">↑</span>
+              <span class="drop-title">Drop a panel image here</span>
+              <span class="drop-copy">or select a file from your device</span>
+              <span class="select-button" aria-hidden="true">Select image</span>
+            </label>
+
+            <div id="preview-panel" class="preview-panel" hidden>
+              <div class="preview-frame">
+                <img id="preview-image" alt="Selected car-body panel preview">
+              </div>
+              <div class="file-summary">
+                <strong id="selected-file-name"></strong>
+                <span id="selected-file-details"></span>
+                <button id="remove-image-button" class="text-button" type="button">
+                  Remove image
+                </button>
+              </div>
+            </div>
+
+            <div class="class-list" aria-label="Supported classes">
+              <span>Normal</span>
+              <span>Scratch</span>
+              <span>Dent</span>
+              <span>Rust</span>
+            </div>
+
+            <button id="analyse-button" class="primary-button" type="submit" disabled>
+              <span class="button-label">Analyse image</span>
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </button>
+          </form>
+
+          <div id="loading-area" class="loading-area" role="status" hidden>
+            <span class="spinner" aria-hidden="true"></span>
+            <div>
+              <strong>Analysing image…</strong>
+              <p>Running the four-class PyTorch model.</p>
+            </div>
+          </div>
+          <div id="error-message" class="message error-message" role="alert" hidden></div>
+        </section>
+
+        <section
+          id="result-panel"
+          class="card result-panel"
+          aria-labelledby="result-heading"
+          aria-live="polite"
+        >
+          <div id="result-placeholder" class="result-placeholder">
+            <span class="placeholder-icon" aria-hidden="true">◎</span>
+            <h2>Classification results</h2>
+            <p>Your model result and recommended next steps will appear here.</p>
+          </div>
+
+          <div id="result-content" hidden>
+            <div class="card-heading result-heading-row">
+              <div>
+                <p class="step-label">Step 2</p>
+                <h2 id="result-heading">Classification result</h2>
+              </div>
+              <span id="result-status-badge" class="result-status-badge"></span>
+            </div>
+
+            <div class="prediction-summary">
+              <div>
+                <span class="summary-label">Predicted class</span>
+                <strong id="predicted-class" class="predicted-class"></strong>
+                <span id="most-likely-class" class="most-likely-class"></span>
+              </div>
+              <div class="confidence-block">
+                <span class="summary-label">Model confidence</span>
+                <strong id="prediction-confidence"></strong>
+              </div>
+            </div>
+
+            <div
+              id="confidence-track"
+              class="confidence-track"
+              role="progressbar"
+              aria-label="Prediction confidence"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <span id="confidence-bar" class="confidence-bar"></span>
+            </div>
+
+            <div id="manual-review-message" class="message warning-message" role="alert" hidden></div>
+
+            <section class="result-section" aria-labelledby="repair-heading">
+              <div class="section-heading">
+                <div>
+                  <span class="section-number" aria-hidden="true">01</span>
+                  <h3 id="repair-heading">Verified repair guidance</h3>
+                </div>
+                <span id="knowledge-source-label" class="source-label">
+                  Source pending
+                </span>
+              </div>
+              <ol id="repair-steps" class="repair-steps"></ol>
+              <p id="repair-empty" class="empty-state" hidden></p>
+            </section>
+
+            <section class="result-section" aria-labelledby="parts-heading">
+              <div class="section-heading">
+                <div>
+                  <span class="section-number" aria-hidden="true">02</span>
+                  <h3 id="parts-heading">Simulated parts inventory</h3>
+                </div>
+                <span class="simulation-label">Simulation only</span>
+              </div>
+              <p class="inventory-note">
+                <span>
+                  Prices and stock levels are mock academic data. No live
+                  supplier or stock API is connected.
+                </span>
+                <span class="inventory-metadata">
+                  <strong>
+                    Data source: <span id="inventory-data-source">—</span>
+                  </strong>
+                  <strong>
+                    Last Updated: <span id="inventory-last-updated">—</span>
+                  </strong>
+                </span>
+              </p>
+              <div class="table-scroll">
+                <table class="parts-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Part</th>
+                      <th scope="col">Mock price</th>
+                      <th scope="col">Fake stock</th>
+                      <th scope="col">Availability</th>
+                    </tr>
+                  </thead>
+                  <tbody id="parts-table-body"></tbody>
+                </table>
+              </div>
+              <p id="parts-empty" class="empty-state" hidden></p>
+            </section>
+
+            <section class="result-section feedback-section" aria-labelledby="feedback-heading">
+              <div class="section-heading">
+                <div>
+                  <span class="section-number" aria-hidden="true">03</span>
+                  <h3 id="feedback-heading">Was this prediction correct?</h3>
+                </div>
+              </div>
+              <p class="feedback-copy">
+                Your response is logged locally for future evaluation and is not
+                used to retrain the model automatically.
+              </p>
+              <div class="feedback-buttons">
+                <button id="feedback-yes" class="choice-button" type="button">
+                  <span aria-hidden="true">✓</span> Yes, correct
+                </button>
+                <button id="feedback-no" class="choice-button" type="button">
+                  <span aria-hidden="true">×</span> No, incorrect
+                </button>
+              </div>
+              <div id="feedback-details" class="feedback-details">
+                <div class="field-group">
+                  <label for="corrected-class">Correct class <span>(optional)</span></label>
+                  <select id="corrected-class" name="corrected-class">
+                    <option value="">Select a class</option>
+                    <option value="normal">Normal</option>
+                    <option value="scratch">Scratch</option>
+                    <option value="dent">Dent</option>
+                    <option value="rust">Rust</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label for="feedback-comment">Comment <span>(optional)</span></label>
+                  <textarea
+                    id="feedback-comment"
+                    maxlength="500"
+                    rows="3"
+                    placeholder="Add a short note about the prediction"
+                  ></textarea>
+                </div>
+              </div>
+              <p id="feedback-status" class="feedback-status" role="status"></p>
+            </section>
+
+            <p id="poc-disclaimer" class="result-disclaimer"></p>
+            <button id="analyse-another-button" class="secondary-button" type="button">
+              Analyse another image
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>University image-classification project · Local simulated inventory</p>
+    </footer>
+
+    <script src="/static/js/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "confidence_threshold": 0.6,
+  "sample_count": 12,
+  "accepted_count": 10,
+  "rejected_count": 2,
+  "accepted_error_count": 2,
+  "coverage": 0.8333333333333334,
+  "manual_review_rate": 0.16666666666666666,
+  "accepted_accuracy": 0.8,
+  "rejected_by_true_class": {
+    "normal": 0,
+    "scratch": 0,
+    "dent": 1,
+    "rust": 1
+  },
+  "mean_confidence_correct": 0.853951182630327,
+  "mean_confidence_incorrect": 0.8093059659004211
+}

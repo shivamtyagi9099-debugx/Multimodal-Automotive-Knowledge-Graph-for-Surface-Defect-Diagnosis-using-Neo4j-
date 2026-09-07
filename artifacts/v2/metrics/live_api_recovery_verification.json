@@ -1,0 +1,36 @@
+{
+  "api_url": "http://127.0.0.1:8899",
+  "root_status": 200,
+  "health_status": 200,
+  "health": {
+    "status": "healthy",
+    "model_loaded": true,
+    "catalog_loaded": true,
+    "neo4j_configured": true,
+    "neo4j_connected": true,
+    "knowledge_source": "neo4j",
+    "neo4j_message": "Neo4j connection verified."
+  },
+  "openapi_status": 200,
+  "prediction_status": 200,
+  "prediction": {
+    "prediction_id": "478bafb59f4e403ba22fa826f24be22b",
+    "filename": "normal-032f357fed5723fa__commons-146134321.jpg",
+    "image_sha256": "032f357fed5723fa837d3abef2014b11c0ab444897325d7df9e06083467ff37b",
+    "predicted_class": "normal",
+    "most_likely_class": "normal",
+    "display_name": "Normal / No Defect",
+    "confidence": 0.9985802173614502,
+    "requires_manual_review": false,
+    "feedback_applied": false,
+    "message": "Predicted class: normal",
+    "repair_steps": [],
+    "parts": [],
+    "inventory_last_updated": "2026-08-19",
+    "inventory_is_simulated": true,
+    "knowledge_source": "neo4j",
+    "poc_disclaimer": "Academic proof-of-concept only. This is not a universal vehicle diagnostic tool."
+  },
+  "feedback_status": null,
+  "feedback": null
+}

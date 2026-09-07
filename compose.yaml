@@ -1,0 +1,29 @@
+name: panelcheck
+
+services:
+  neo4j:
+    image: neo4j:2026.06.0
+    container_name: panelcheck-neo4j
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:7474:7474"
+      - "127.0.0.1:7687:7687"
+    environment:
+      NEO4J_AUTH: "neo4j/${NEO4J_PASSWORD:?Copy .env.example to .env and set NEO4J_PASSWORD}"
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >-
+          cypher-shell -u neo4j -p "$${NEO4J_AUTH#*/}" "RETURN 1"
+          >/dev/null 2>&1 || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+volumes:
+  neo4j_data:
+  neo4j_logs:

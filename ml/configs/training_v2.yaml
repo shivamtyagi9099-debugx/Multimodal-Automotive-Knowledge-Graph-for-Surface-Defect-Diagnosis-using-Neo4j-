@@ -1,0 +1,50 @@
+random_seed: 42
+training_path: data/dataset_v2/processed/train
+validation_path: data/dataset_v2/processed/validation
+class_names_path: config/class_names.json
+source_manifest_path: data/dataset_v2/manifests/dataset_manifest.csv
+training_manifest_path: data/dataset_v2/manifests/train_manifest.csv
+validation_manifest_path: data/dataset_v2/manifests/validation_manifest.csv
+image_size: 224
+preprocessing_geometry: square_pad_then_resize
+batch_size: 16
+weight_decay: 0.0001
+early_stopping_patience: 6
+scheduler_patience: 2
+scheduler_factor: 0.3
+minimum_learning_rate: 0.0000001
+model_architecture: resnet18
+pretrained: true
+use_class_weights: true
+num_workers: 0
+training_stages:
+  - name: classification_head
+    trainable: head
+    epoch_count: 5
+    learning_rate: 0.001
+  - name: full_fine_tuning
+    trainable: all
+    epoch_count: 25
+    learning_rate: 0.00005
+confidence_threshold: 0.60
+threshold_tuning:
+  enabled: true
+  minimum_coverage: 0.65
+  candidate_thresholds:
+    - 0.30
+    - 0.35
+    - 0.40
+    - 0.45
+    - 0.50
+    - 0.55
+    - 0.60
+    - 0.65
+    - 0.70
+    - 0.75
+    - 0.80
+    - 0.85
+    - 0.90
+model_output_path: artifacts/v2/models/model.pt
+history_output_path: artifacts/v2/metrics/training_history.json
+validation_threshold_output_path: artifacts/v2/metrics/validation_threshold_analysis.json
+training_configuration_output_path: artifacts/v2/metrics/training_configuration.json

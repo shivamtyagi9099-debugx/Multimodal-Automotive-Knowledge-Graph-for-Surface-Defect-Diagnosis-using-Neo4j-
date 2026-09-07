@@ -1,0 +1,80 @@
+{
+  "overall_accuracy": 0.75,
+  "number_of_test_samples": 12,
+  "model_identifier": "070b774d1479b9bb38562705c423277a36c9c3327ee376a9082f13f9751a3418",
+  "test_manifest_checksum": "0e7e67fe9157945fd2d3c4c7b00d5c4b9d4fdce416892e15816402bb86336031",
+  "confusion_matrix": [
+    [
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      3
+    ]
+  ],
+  "per_class_metrics": [
+    {
+      "class_name": "normal",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 3
+    },
+    {
+      "class_name": "scratch",
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1_score": 0.5,
+      "support": 3
+    },
+    {
+      "class_name": "dent",
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1_score": 0.6666666666666666,
+      "support": 3
+    },
+    {
+      "class_name": "rust",
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1_score": 0.75,
+      "support": 3
+    }
+  ],
+  "threshold_analysis": {
+    "confidence_threshold": 0.6,
+    "sample_count": 12,
+    "accepted_count": 9,
+    "rejected_count": 3,
+    "accepted_error_count": 2,
+    "coverage": 0.75,
+    "manual_review_rate": 0.25,
+    "accepted_accuracy": 0.7777777777777778,
+    "rejected_by_true_class": {
+      "normal": 0,
+      "scratch": 1,
+      "dent": 2,
+      "rust": 0
+    },
+    "mean_confidence_correct": 0.8656864629851447,
+    "mean_confidence_incorrect": 0.600870798031489
+  }
+}

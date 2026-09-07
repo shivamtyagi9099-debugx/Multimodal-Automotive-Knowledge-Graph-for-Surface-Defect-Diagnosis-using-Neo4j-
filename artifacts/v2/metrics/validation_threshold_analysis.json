@@ -1,0 +1,258 @@
+{
+  "selected_threshold": 0.65,
+  "selection_dataset": "validation",
+  "selected_analysis": {
+    "confidence_threshold": 0.65,
+    "sample_count": 35,
+    "accepted_count": 30,
+    "rejected_count": 5,
+    "accepted_error_count": 0,
+    "coverage": 0.8571428571428571,
+    "manual_review_rate": 0.14285714285714285,
+    "accepted_accuracy": 1.0,
+    "rejected_by_true_class": {
+      "normal": 0,
+      "scratch": 2,
+      "dent": 2,
+      "rust": 1
+    },
+    "mean_confidence_correct": 0.8990227254954252,
+    "mean_confidence_incorrect": 0.5683277547359467
+  },
+  "candidate_analyses": [
+    {
+      "confidence_threshold": 0.3,
+      "sample_count": 35,
+      "accepted_count": 35,
+      "rejected_count": 0,
+      "accepted_error_count": 2,
+      "coverage": 1.0,
+      "manual_review_rate": 0.0,
+      "accepted_accuracy": 0.9428571428571428,
+      "rejected_by_true_class": {
+        "normal": 0,
+        "scratch": 0,
+        "dent": 0,
+        "rust": 0
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.35,
+      "sample_count": 35,
+      "accepted_count": 35,
+      "rejected_count": 0,
+      "accepted_error_count": 2,
+      "coverage": 1.0,
+      "manual_review_rate": 0.0,
+      "accepted_accuracy": 0.9428571428571428,
+      "rejected_by_true_class": {
+        "normal": 0,
+        "scratch": 0,
+        "dent": 0,
+        "rust": 0
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.4,
+      "sample_count": 35,
+      "accepted_count": 35,
+      "rejected_count": 0,
+      "accepted_error_count": 2,
+      "coverage": 1.0,
+      "manual_review_rate": 0.0,
+      "accepted_accuracy": 0.9428571428571428,
+      "rejected_by_true_class": {
+        "normal": 0,
+        "scratch": 0,
+        "dent": 0,
+        "rust": 0
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.45,
+      "sample_count": 35,
+      "accepted_count": 35,
+      "rejected_count": 0,
+      "accepted_error_count": 2,
+      "coverage": 1.0,
+      "manual_review_rate": 0.0,
+      "accepted_accuracy": 0.9428571428571428,
+      "rejected_by_true_class": {
+        "normal": 0,
+        "scratch": 0,
+        "dent": 0,
+        "rust": 0
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.5,
+      "sample_count": 35,
+      "accepted_count": 35,
+      "rejected_count": 0,
+      "accepted_error_count": 2,
+      "coverage": 1.0,
+      "manual_review_rate": 0.0,
+      "accepted_accuracy": 0.9428571428571428,
+      "rejected_by_true_class": {
+        "normal": 0,
+        "scratch": 0,
+        "dent": 0,
+        "rust": 0
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.55,
+      "sample_count": 35,
+      "accepted_count": 34,
+      "rejected_count": 1,
+      "accepted_error_count": 1,
+      "coverage": 0.9714285714285714,
+      "manual_review_rate": 0.02857142857142857,
+      "accepted_accuracy": 0.9705882352941176,
+      "rejected_by_true_class": {
+        "normal": 0,
+        "scratch": 1,
+        "dent": 0,
+        "rust": 0
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.6,
+      "sample_count": 35,
+      "accepted_count": 31,
+      "rejected_count": 4,
+      "accepted_error_count": 1,
+      "coverage": 0.8857142857142857,
+      "manual_review_rate": 0.11428571428571428,
+      "accepted_accuracy": 0.967741935483871,
+      "rejected_by_true_class": {
+        "normal": 0,
+        "scratch": 2,
+        "dent": 2,
+        "rust": 0
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.65,
+      "sample_count": 35,
+      "accepted_count": 30,
+      "rejected_count": 5,
+      "accepted_error_count": 0,
+      "coverage": 0.8571428571428571,
+      "manual_review_rate": 0.14285714285714285,
+      "accepted_accuracy": 1.0,
+      "rejected_by_true_class": {
+        "normal": 0,
+        "scratch": 2,
+        "dent": 2,
+        "rust": 1
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.7,
+      "sample_count": 35,
+      "accepted_count": 29,
+      "rejected_count": 6,
+      "accepted_error_count": 0,
+      "coverage": 0.8285714285714286,
+      "manual_review_rate": 0.17142857142857143,
+      "accepted_accuracy": 1.0,
+      "rejected_by_true_class": {
+        "normal": 0,
+        "scratch": 2,
+        "dent": 3,
+        "rust": 1
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.75,
+      "sample_count": 35,
+      "accepted_count": 28,
+      "rejected_count": 7,
+      "accepted_error_count": 0,
+      "coverage": 0.8,
+      "manual_review_rate": 0.2,
+      "accepted_accuracy": 1.0,
+      "rejected_by_true_class": {
+        "normal": 1,
+        "scratch": 2,
+        "dent": 3,
+        "rust": 1
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.8,
+      "sample_count": 35,
+      "accepted_count": 27,
+      "rejected_count": 8,
+      "accepted_error_count": 0,
+      "coverage": 0.7714285714285715,
+      "manual_review_rate": 0.22857142857142856,
+      "accepted_accuracy": 1.0,
+      "rejected_by_true_class": {
+        "normal": 1,
+        "scratch": 2,
+        "dent": 3,
+        "rust": 2
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.85,
+      "sample_count": 35,
+      "accepted_count": 24,
+      "rejected_count": 11,
+      "accepted_error_count": 0,
+      "coverage": 0.6857142857142857,
+      "manual_review_rate": 0.3142857142857143,
+      "accepted_accuracy": 1.0,
+      "rejected_by_true_class": {
+        "normal": 2,
+        "scratch": 2,
+        "dent": 5,
+        "rust": 2
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    },
+    {
+      "confidence_threshold": 0.9,
+      "sample_count": 35,
+      "accepted_count": 23,
+      "rejected_count": 12,
+      "accepted_error_count": 0,
+      "coverage": 0.6571428571428571,
+      "manual_review_rate": 0.34285714285714286,
+      "accepted_accuracy": 1.0,
+      "rejected_by_true_class": {
+        "normal": 2,
+        "scratch": 2,
+        "dent": 6,
+        "rust": 2
+      },
+      "mean_confidence_correct": 0.8990227254954252,
+      "mean_confidence_incorrect": 0.5683277547359467
+    }
+  ]
+}

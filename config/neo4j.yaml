@@ -1,0 +1,28 @@
+# Non-secret Neo4j defaults for graph seed/check tooling and FastAPI wiring.
+# NEO4J_URI, NEO4J_USERNAME, and NEO4J_DATABASE may override these values.
+# The password is never stored here; it is read only from the named environment
+# variable. Copy .env.example to .env and replace its placeholder password.
+enabled: true
+uri: bolt://127.0.0.1:7687
+username: neo4j
+database: neo4j
+password_environment_variable: NEO4J_PASSWORD
+
+# Files that define the approved four-class knowledge graph content.
+class_names_path: config/class_names.json
+catalog_seed_path: data/static/defect_catalog.json
+object_type: car_body_panel
+normal_class_name: normal
+
+# Every node created by the project seed process receives this marker so it can
+# be distinguished from unrelated Neo4j data without deleting the whole graph.
+managed_by: panelcheck-seed-v1
+
+# Conservative local PoC connection limits. These are not production sizing
+# claims and may be adjusted for a different local development machine.
+connection_timeout_seconds: 3.0
+connection_acquisition_timeout_seconds: 3.0
+# Fail over promptly during an interactive demo instead of using the driver's
+# 30-second transaction-retry default.
+max_transaction_retry_time_seconds: 1.0
+max_connection_pool_size: 20

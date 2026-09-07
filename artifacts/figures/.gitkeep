@@ -1,0 +1,8 @@
+Generated output directory for evaluation figures.
+
+Expected file:
+- confusion_matrix.png: four-class confusion matrix generated only during the
+  final evaluation of the checksum-verified, untouched test set.
+
+Do not add a placeholder chart because it could be mistaken for a real model
+evaluation result.

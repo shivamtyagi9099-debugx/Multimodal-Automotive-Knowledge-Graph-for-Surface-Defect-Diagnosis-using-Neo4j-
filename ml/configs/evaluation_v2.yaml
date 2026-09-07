@@ -1,0 +1,14 @@
+frozen_test_path: data/dataset_v2/processed/test
+test_manifest_path: data/dataset_v2/manifests/test_manifest.csv
+test_manifest_checksum_path: data/dataset_v2/manifests/test_set_checksum.txt
+model_path: artifacts/v2/models/model.pt
+class_names_path: config/class_names.json
+image_size: 224
+batch_size: 32
+num_workers: 0
+metrics_output_path: artifacts/v2/metrics/per_class_metrics.csv
+confusion_matrix_output_path: artifacts/v2/figures/confusion_matrix.png
+report_output_path: artifacts/v2/metrics/evaluation_report.json
+predictions_output_path: artifacts/v2/metrics/test_predictions.csv
+confidence_analysis_output_path: artifacts/v2/metrics/confidence_analysis.json
+misclassification_output_path: artifacts/v2/metrics/misclassification_report.csv

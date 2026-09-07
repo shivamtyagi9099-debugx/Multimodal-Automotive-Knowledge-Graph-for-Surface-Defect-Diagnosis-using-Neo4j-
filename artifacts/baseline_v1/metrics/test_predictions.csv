@@ -1,0 +1,13 @@
+sample_index,true_class,predicted_class,confidence,requires_manual_review,is_correct
+0,dent,rust,0.4246990382671356,True,False
+1,dent,dent,0.9711242318153381,False,True
+2,dent,dent,0.5834071040153503,True,True
+3,normal,normal,0.9874175786972046,False,True
+4,normal,normal,0.9863496422767639,False,True
+5,normal,normal,0.9804783463478088,False,True
+6,rust,rust,0.9855597019195557,False,True
+7,rust,rust,0.7735825777053833,False,True
+8,rust,rust,0.9848330616950989,False,True
+9,scratch,scratch,0.5384259223937988,True,True
+10,scratch,rust,0.6244800686836243,False,False
+11,scratch,dent,0.7534332871437073,False,False

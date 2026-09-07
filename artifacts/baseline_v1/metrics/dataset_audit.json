@@ -1,0 +1,78 @@
+{
+  "record_count": 120,
+  "counts_by_class_and_split": {
+    "dent": {
+      "test": 3,
+      "train": 24,
+      "validation": 3
+    },
+    "normal": {
+      "test": 3,
+      "train": 24,
+      "validation": 3
+    },
+    "rust": {
+      "test": 3,
+      "train": 24,
+      "validation": 3
+    },
+    "scratch": {
+      "test": 3,
+      "train": 24,
+      "validation": 3
+    }
+  },
+  "source_label_counts": {
+    "dent:Dent": 30,
+    "normal:Back-bumper": 8,
+    "normal:Front-bumper": 11,
+    "normal:Front-door": 6,
+    "normal:Hood": 2,
+    "normal:Quarter-panel": 2,
+    "normal:Trunk": 1,
+    "rust:Corrosion": 30,
+    "scratch:Scratch": 30
+  },
+  "normal_rows_with_explicit_no_damage_label": 0,
+  "normal_rows_without_explicit_no_damage_label": 30,
+  "image_dimensions": {
+    "dent": {
+      "count": 30,
+      "short_side_min": 96,
+      "short_side_median": 109.0,
+      "short_side_max": 317,
+      "below_128_count": 19
+    },
+    "normal": {
+      "count": 30,
+      "short_side_min": 295,
+      "short_side_median": 473.0,
+      "short_side_max": 601,
+      "below_128_count": 0
+    },
+    "rust": {
+      "count": 30,
+      "short_side_min": 96,
+      "short_side_median": 106.5,
+      "short_side_max": 597,
+      "below_128_count": 18
+    },
+    "scratch": {
+      "count": 30,
+      "short_side_min": 96,
+      "short_side_median": 96.0,
+      "short_side_max": 599,
+      "below_128_count": 24
+    }
+  },
+  "non_default_exif_orientation_count": 0,
+  "near_duplicate_threshold": 6,
+  "near_duplicate_pair_count": 0,
+  "cross_split_near_duplicate_pair_count": 0,
+  "cross_class_near_duplicate_pair_count": 0,
+  "interpretation": [
+    "A perceptual-hash match is a review candidate, not automatic proof of duplication.",
+    "A body-part annotation does not certify that a panel is undamaged.",
+    "Class-dependent crop size can become a shortcut unrelated to defect appearance."
+  ]
+}

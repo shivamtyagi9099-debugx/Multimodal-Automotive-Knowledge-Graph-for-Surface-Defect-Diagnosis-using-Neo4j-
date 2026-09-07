@@ -1,0 +1,68 @@
+{
+  "record_count": 350,
+  "counts_by_class_and_split": {
+    "dent": {
+      "test": 10,
+      "train": 80,
+      "validation": 10
+    },
+    "normal": {
+      "test": 8,
+      "train": 64,
+      "validation": 8
+    },
+    "rust": {
+      "test": 7,
+      "train": 56,
+      "validation": 7
+    },
+    "scratch": {
+      "test": 10,
+      "train": 80,
+      "validation": 10
+    }
+  },
+  "source_label_counts": {},
+  "normal_rows_with_explicit_no_damage_label": 0,
+  "normal_rows_without_explicit_no_damage_label": 80,
+  "image_dimensions": {
+    "dent": {
+      "count": 100,
+      "short_side_min": 96,
+      "short_side_median": 166.5,
+      "short_side_max": 581,
+      "below_128_count": 14
+    },
+    "normal": {
+      "count": 80,
+      "short_side_min": 609,
+      "short_side_median": 853.0,
+      "short_side_max": 1098,
+      "below_128_count": 0
+    },
+    "rust": {
+      "count": 70,
+      "short_side_min": 96,
+      "short_side_median": 853.0,
+      "short_side_max": 1280,
+      "below_128_count": 11
+    },
+    "scratch": {
+      "count": 100,
+      "short_side_min": 96,
+      "short_side_median": 96.0,
+      "short_side_max": 534,
+      "below_128_count": 68
+    }
+  },
+  "non_default_exif_orientation_count": 0,
+  "near_duplicate_threshold": 6,
+  "near_duplicate_pair_count": 0,
+  "cross_split_near_duplicate_pair_count": 0,
+  "cross_class_near_duplicate_pair_count": 0,
+  "interpretation": [
+    "A perceptual-hash match is a review candidate, not automatic proof of duplication.",
+    "A body-part annotation does not certify that a panel is undamaged.",
+    "Class-dependent crop size can become a shortcut unrelated to defect appearance."
+  ]
+}

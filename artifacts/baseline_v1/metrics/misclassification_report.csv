@@ -1,0 +1,4 @@
+sample_index,filename,true_class,predicted_class,confidence,requires_manual_review,is_correct
+0,dent-23e5bee4ddc3ff08__dent-23e5bee4ddc3ff08.jpg,dent,rust,0.4246993362903595,True,False
+10,scratch-6f7327ad9483cd88__scratch-6f7327ad9483cd88.jpg,scratch,rust,0.6244794726371765,False,False
+11,scratch-77ed999aa539e168__scratch-77ed999aa539e168.jpg,scratch,dent,0.7534337043762207,False,False
